@@ -1,6 +1,6 @@
 public interface Service {
 
-        void cook (String eat);
+        String cook (String eat);
 
         void sale (int price);
 

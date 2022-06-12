@@ -1,8 +1,20 @@
+import java.util.ArrayList;
+
 public class Cafe implements Service  {
+    ArrayList<String> dishes;
+    public Cafe() {
+        dishes = new ArrayList<String>();
+        dishes.add("salad");
+    }
 
 
-    public void cook(String eat) {
+    public String cook(String eat) {
+        for (String i : dishes) {
+            if (i.equals(eat))
+                return eat;
+        }
 
+        return "Блюдо не найдено";
     }
 
     public void sale(int price) {
