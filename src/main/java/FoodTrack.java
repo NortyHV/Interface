@@ -5,7 +5,11 @@ public class FoodTrack implements Service {
 
     public FoodTrack() {
         dishes = new ArrayList<String>();
-        dishes.add("hotdog");
+        dishes.add("Хот-дог");
+        dishes.add("Шаурма");
+        dishes.add("Кока-кола");
+        dishes.add("Семечки");
+        dishes.add("Гамбургер");
     }
 
     public String cook(String eat) {
@@ -14,10 +18,15 @@ public class FoodTrack implements Service {
                 return eat;
         }
 
-        return "Блюдо не найдено";
+        throw new NotCheckedException ("Блюдо не найдено");
     }
 
-    public void sale(int price) {
-
+    public String sell(float cash, String dishName) throws CheckedException {
+        if (cash - 4.75f < 1) {
+            throw new CheckedException("Извините, нам на чай остаётся мало");
+        }
+        return cook(dishName);
     }
+
+
 }

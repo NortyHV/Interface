@@ -2,6 +2,6 @@ public interface Service {
 
         String cook (String eat);
 
-        void sale (int price);
+        String sell (float cash, String dishName) throws CheckedException;
 
 }

@@ -5,6 +5,21 @@ public class Main {
         Service cafe = new Cafe();
 
         Service foodTrack = new FoodTrack();
+        try {
+            foodTrack.sell(8,"Хот-дог");
+            foodTrack.sell(5,"5");
+        } catch (CheckedException e) {
+            System.out.println("Словил ошибку" + e.toString());
+
+        }
+
+        try {
+            foodTrack.sell(10,"5");
+        } catch (CheckedException e) {
+            System.out.println("Словил ошибку" + e.toString());
+
+        }
+
 
         Service cooking = new Cooking();
 

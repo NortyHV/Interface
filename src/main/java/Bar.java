@@ -16,6 +16,11 @@ public class Bar implements Service {
         return "Блюдо не найдено";
     }
 
+    @Override
+    public String sell(float cash, String dishName) throws CheckedException {
+        return null;
+    }
+
     public void sale(int price) {
 
     }
